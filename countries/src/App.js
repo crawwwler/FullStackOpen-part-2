@@ -13,7 +13,6 @@ const App = () => {
     server
       .getAll()
       .then(response => {
-        //console.log(response.data)
         setCountries(response.data)
       })
   }, [])

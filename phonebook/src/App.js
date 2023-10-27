@@ -47,21 +47,18 @@ const App = () => {
     setNewNumber(event.target.value)
   }
 
-
-
-  // THE METHOD FOR ADDING PERSONS TO OUR DB
-  // THE INITIAL CHECK FOR UPDATING NUMBER OF EXISTING
-  // NAMES ALSO HAPPENS HERE
+  // THE METHOD FOR ADDING PERSONS TO DB
+  // THE INITIAL CHECK FOR UPDATING NUMBER OF EXISTING NAMES ALSO HAPPENS HERE 
   const adding = event => {
     event.preventDefault()
     const nuName = {
       name: newName,
       number: newNumber
     }
-    //CONDITIONAL TO CHECK THE NAMES
+
     if (persons.map(person =>
       person.name.toLowerCase()).includes(nuName.name.toLowerCase())) {
-      replaceNumber(nuName) // MATHOD FOR REPLACING NUMBER
+      replaceNumber(nuName) 
     } else {
       server
         .create(nuName)
@@ -102,6 +99,7 @@ const App = () => {
         })
     }
   }
+
   // REMOVING PERSON FROM THE DB
   const removePerson = (id) => {
     const p = persons.find(person => person.id === id)

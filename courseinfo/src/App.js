@@ -46,8 +46,7 @@ const App = () => {
       ]
     }
   ]
-  // WE PASS THE COURSES TO A CHILD COMPONENT WHICH IS
-  // RESPONSSIBLE FOR RENDERING THE PAGE
+
   return <Course courses={courses} />
 }
 

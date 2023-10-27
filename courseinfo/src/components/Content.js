@@ -1,6 +1,5 @@
 import Part from './Part'
 const Content = ({ parts }) => {
-    // USING ARRAY METHOD , REDUCE, TO GET THE SUM OF THE EXERCISES
     const sumOfEx = parts.reduce((sum, part) => {
         return sum + part.exercises
     }, 0)
